@@ -8,6 +8,7 @@ service ProductService {
   rpc DecreaseStock (DecreaseStockRequest) returns (DecreaseStockResponse) {}
 }
 
+// CreateProduct
 
 message CreateProductRequest {
   string name = 1;
@@ -22,6 +23,7 @@ message CreateProductResponse {
   int32 id = 3;
 }
 
+// FindOne
 
 message FindOneData {
   int32 id = 1;
@@ -41,6 +43,8 @@ message FindOneResponse {
   FindOneData data = 3;
 }
 
+// DecreaseStock
+
 message DecreaseStockRequest {
   int32 id = 1;
 }
@@ -48,4 +52,4 @@ message DecreaseStockRequest {
 message DecreaseStockResponse {
   int32 status = 1;
   repeated string error = 2;
-} 
+}
